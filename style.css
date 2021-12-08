@@ -20,9 +20,15 @@ body {
 
 }
 
+#web-icon-container {
+    display: flex;
+    height: 45px;
+    align-items: center;
+    padding-left: 10px;
+}
+
 #web-icon {
-    height: 80%
-    
+    height: 80%;
 }
 
 /* ---------- side bar ---------- */
