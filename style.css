@@ -1,0 +1,38 @@
+body {
+    margin:0px;
+    padding:0px;
+}
+
+#project-container {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 45px auto;
+    grid-template-columns: 270px auto;
+}
+
+/* ---------- top bar ---------- */
+#top-bar-container {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-color: #1d1d1f;
+
+}
+
+#web-icon {
+    height: 80%
+    
+}
+
+/* ---------- side bar ---------- */
+#side-bar-container {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+/* ---------- display container ---------- */
+#display-container {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
