@@ -12,10 +12,14 @@
     <title>Document</title>
 </head>
 <body>
-    <div id='project-container'>
+    <div id='full-project-container'>
         <div id='top-bar-container'>
             <div id='web-icon-container'>
                 <img id='web-icon' src='./img/web-icon.png'>
+            </div>
+            <div id='plus-icon-container'>
+                <img id='plus-icon' src='./img/plus-icon.png'>
+                Add Task
             </div>
         </div>
         <div id='side-bar-container'>
@@ -24,12 +28,22 @@
                 <li class="no-bullets" id='today'>Today</li>
                 <div id='project-tab-container'>
                     Project
+                    <div id='project-container'>
+                    </div>
                 </div>
             </div>
         </div>
         <div id='display-container'>
-
+            <div id='display-content-container'>
+                <div id='display-top-bar'>
+                    <div id='top-bar-title'>Title</div>
+                    <div id='top-bar-duedate'>Due Date</div>
+                </div>
+            </div>
+            <div id='task-container'></div>
         </div>
     </div>
+    <!-- Hidden Div-->
+    <div id='add-task-container' class="hidden">S</div>
 </body>
 </html>
