@@ -84,11 +84,13 @@ li.no-bullets {
     border-radius: 10px;
     padding-left: 10px;
     max-width: 200px;
+    cursor: pointer;
 }
 
 li.project-li {
     border-radius: 10px;
     padding-left: 10px;
+    cursor: pointer;
 }
 
 
@@ -173,6 +175,65 @@ li:hover {
 }
 
 /* ---------- add task container ---------- */
+
+#add-task-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.5;
+    background-color: grey;
+}
+
+#add-task {
+    display: flex;
+    flex-direction: column;
+    position:fixed;
+    top: 10%;
+    left: 40vw;
+    height: 50%;
+    width: 20vw;
+    border: 1px solid blanchedalmond;
+    border-radius: 5px;
+    background-color: rgb(46, 44, 44);
+}
+
+#title-container {
+    margin: 8vh 2vw 0 2vw;
+    font-size: 1.2rem;
+    padding: 15px 10px;
+    background-color: gray;
+    outline: none;
+    border-radius: 10px;
+}
+
+#description-container {
+    margin: 2vh 2vw 0 2vw;
+    font-size: 1.2rem;
+    background-color: gray;
+    display:inline-block;
+    padding: 15px 10px;
+    line-height: 140%;
+    outline: none;
+    border-radius: 10px;
+}
+
+#due-date-container {
+    margin: 2vh 2vw 0 2vw;
+    padding: 10px 10px;
+    background-color: gray;
+    outline: none;
+    border-radius: 10px;
+}
+
+#project-list-container {
+    margin: 2vh 2vw 0 2vw;
+    padding: 10px 10px;
+    background-color: gray;
+    outline: none;
+    border-radius: 10px;
+}
 
 .hidden {
     display: none;
