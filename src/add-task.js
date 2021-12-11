@@ -42,7 +42,6 @@ function createTask() {
         option.setAttribute('value', projectList[i]);
         projectDataList.appendChild(option);        
     }
-    console.log(format(new Date(2014, 1, 11), 'MM/dd/yyyy'));
     /* -------------------------------------------------- */
 
     console.log(projectList);

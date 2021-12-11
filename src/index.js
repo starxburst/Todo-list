@@ -5,6 +5,6 @@ import {createProjectSidebar} from './project';
 import createTask from './add-task';
 
 //testFactory();
-checkLocalStorage;
+checkLocalStorage();
 createHomePage();
 createProjectSidebar();
