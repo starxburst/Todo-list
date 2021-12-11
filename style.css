@@ -123,11 +123,12 @@ li:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-height: 80vh;
+    overflow-y: scroll;
 }
 
 #display-content-container {
     width: 40vw;
-    height: fit-content;
 }
 
 #display-top-bar {
@@ -216,7 +217,7 @@ li:hover {
     padding: 15px 10px;
     line-height: 140%;
     outline: none;
-    border-radius: 10px;
+    border-radius: 10px;z
 }
 
 #due-date-container {
@@ -233,6 +234,37 @@ li:hover {
     background-color: gray;
     outline: none;
     border-radius: 10px;
+}
+
+#btn-container {
+    display: flex;
+    justify-content: center;
+    margin: 2vh 2vw 0 2vw;
+    height: fit-content;
+}
+
+#add-button {
+    font-size: 1.5rem;
+    margin-right: 1vw;
+    background-color: gray;
+    border: transparent;
+    border-radius: 5px;
+}
+
+#add-button:hover {
+    color: yellowgreen;
+}
+
+#cancel-button {
+    font-size: 1.5rem;
+    background-color: gray;
+    border: transparent;
+    border-radius: 5px;
+}
+
+
+#cancel-button:hover {
+    color: tomato;
 }
 
 .hidden {
