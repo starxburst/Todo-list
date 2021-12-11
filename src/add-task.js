@@ -1,4 +1,5 @@
 import {todo_list, todoListFactory} from './todo-list-factory';
+import {populateStorage} from './storage';
 import {createProjectTodoList, createHomeTodoList, updateDisplay} from './task-builder';
 import {projectList, createProjectSidebar} from './project';
 import format from 'date-fns/format';
@@ -95,6 +96,7 @@ function submitTask(e) {
     const completion = false;
     const newTodo = todoListFactory(title, description, dueDate, completion, project);
     todo_list.push(newTodo);
+    populateStorage();
     reloadPage();
 }
 

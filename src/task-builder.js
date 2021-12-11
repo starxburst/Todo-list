@@ -1,4 +1,5 @@
 import {todo_list} from './todo-list-factory';
+import {populateStorage} from './storage';
 
 function updateDisplay() {
     const taskContainer = document.querySelector('#task-container');
@@ -66,6 +67,7 @@ function updateCompletion(e) {
         titleDiv.classList.remove('completed');
         dueDateDiv.classList.remove('completed');
     }
+    populateStorage();
 }
 
 function createHomeTodoList() {

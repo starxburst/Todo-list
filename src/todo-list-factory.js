@@ -4,6 +4,7 @@ function todoListFactory(title, description, dueDate, completion, project) {
     return {title, description, dueDate, completion, project};
 }
 
+/*
 function testFactory() {
     todo_list[0] = todoListFactory('testing', 'test description', '11/08/2012', true, 'Happy');
     todo_list[1] = todoListFactory('testing 222', 'Attack', '25/01/2025', false, 'sad');
@@ -22,5 +23,6 @@ function testFactory() {
     todo_list[14] = todoListFactory('testing 345', 'Fun', '08/12/2125', false, 'Eat');
     console.log(todo_list[0]);
 }
+*/
 
-export {todo_list, todoListFactory, testFactory};
+export {todo_list, todoListFactory};
