@@ -1,15 +1,52 @@
 import {todo_list} from './todo-list-factory';
+import {projectList} from './project';
 
 const plusBtn = document.getElementById('plus-icon-container');
 plusBtn.addEventListener('click', createTask);
 
-function createTask() {
+function createTask() {    
     const addTaskContainer = document.getElementById('add-task-container');
-    const titleContainer = document.createElement('div');
-    const titleInput = document.createElement('input');
+    const addTaskBackground = document.getElementById('add-task-background');
+    const addTask = document.getElementById('add-task');
+    const titleContainer = document.createElement('input');
+    const descriptionContainer = document.createElement('textarea');
+    const dueDateContainer = document.createElement('input');
+    const projectListContainer = document.createElement('input');
+    const projectDataList = document.createElement('datalist');
+
+    titleContainer.setAttribute('type', 'text');
+    titleContainer.setAttribute('placeholder', 'Title');
+    titleContainer.setAttribute('id', 'title-container');
+
+    descriptionContainer.setAttribute('placeholder', 'Description');
+    descriptionContainer.setAttribute('id', 'description-container');
+
+    dueDateContainer.setAttribute('type', 'date');
+    dueDateContainer.setAttribute('id', 'due-date-container');
+
+    projectListContainer.setAttribute('list', 'browsers');
+    projectListContainer.setAttribute('id', 'project-list-container');
+    projectListContainer.setAttribute('placeholder', 'Choose a project from below');
+
+    projectDataList.setAttribute('id', 'browsers');
+    /* ---------- Create Project dropdown list ---------- */
+    for (let i = 0; i < projectList.length; i++) {
+        const option = document.createElement('option');
+        option.setAttribute('value', projectList[i]);
+        projectDataList.appendChild(option);        
+    }
+    console.log(projectList);
+    /* -------------------------------------------------- */
+
     addTaskContainer.classList.remove('hidden');
+    addTaskBackground.classList.remove('hidden');
+    addTask.classList.remove('hidden');
 
-
+    addTask.appendChild(titleContainer);
+    addTask.appendChild(descriptionContainer);
+    addTask.appendChild(dueDateContainer);
+    addTask.appendChild(projectListContainer);
+    addTask.appendChild(projectDataList);
 }
 
 export default createTask;
