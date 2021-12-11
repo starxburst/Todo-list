@@ -1,7 +1,8 @@
-import {todo_list} from './todo-list-factory';
+import {todo_list, defaultTask} from './todo-list-factory';
 
 function checkLocalStorage() {
     if(!localStorage.getItem("savedTodoList")) {
+        defaultTask();
         populateStorage();
     } else {
         setStyles();
