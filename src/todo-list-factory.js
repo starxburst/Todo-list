@@ -23,4 +23,4 @@ function testFactory() {
     console.log(todo_list[0]);
 }
 
-export {todo_list, testFactory};
+export {todo_list, todoListFactory, testFactory};
