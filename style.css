@@ -88,6 +88,7 @@ li.no-bullets {
 }
 
 li.project-li {
+    white-space: nowrap;
     border-radius: 10px;
     padding-left: 10px;
     cursor: pointer;
@@ -106,6 +107,7 @@ li:hover {
 }
 
 #project-container {
+    white-space: nowrap;
     margin-top: 10px;
     margin-left: 40px;
     margin-right: 10px;
