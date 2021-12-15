@@ -1,5 +1,6 @@
 import {todo_list} from './todo-list-factory';
 import {populateStorage} from './storage';
+import {reloadPage} from './add-task';
 
 function updateDisplay() {
     const taskContainer = document.querySelector('#task-container');
@@ -12,6 +13,8 @@ function createTaskCard(title, dueDate, completion, id) {
     const checkbox = document.createElement('input');
     const titleDiv = document.createElement('div');
     const dueDateDiv = document.createElement('div');
+    const editBtn = document.createElement('button');
+    const deleteBtn = document.createElement('button');
 
     
     checkbox.setAttribute('type', 'checkbox');
@@ -25,6 +28,7 @@ function createTaskCard(title, dueDate, completion, id) {
     }
 
     checkbox.addEventListener('change', updateCompletion);
+    deleteBtn.addEventListener('click', deleteTask);
 
     checkboxContainer.appendChild(checkbox);
     checkboxContainer.classList.add('checkbox-container');
@@ -36,15 +40,23 @@ function createTaskCard(title, dueDate, completion, id) {
     dueDateDiv.classList.add('due-date-div');
     checkboxContainer.classList.add('checkbox-container');
     checkbox.classList.add('checkbox');
+    editBtn.classList.add('edit-button');
+    deleteBtn.classList.add('delete-button');
 
     checkbox.setAttribute('id', id);
     titleDiv.setAttribute('id', `title${id}`);
     dueDateDiv.setAttribute('id', `dueDate${id}`);
+    editBtn.setAttribute('type', 'button');
+    editBtn.setAttribute('id', id);
+    deleteBtn.setAttribute('type', 'button');
+    deleteBtn.setAttribute('id', id);
 
     taskCardContainer.classList.add('task-card-container');
     taskCardContainer.append(checkboxContainer);
     taskCardContainer.append(titleDiv);
     taskCardContainer.append(dueDateDiv);
+    taskCardContainer.appendChild(editBtn);
+    taskCardContainer.appendChild(deleteBtn);
 
     return taskCardContainer;
 }
@@ -68,6 +80,13 @@ function updateCompletion(e) {
         dueDateDiv.classList.remove('completed');
     }
     populateStorage();
+}
+
+function deleteTask(e) {
+    let id = e.target.getAttribute('id');
+    todo_list.splice(id, 1);
+    populateStorage();
+    reloadPage();
 }
 
 function createHomeTodoList() {

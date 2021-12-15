@@ -110,4 +110,4 @@ function reloadPage() {
     }
 }
 
-export default createTask;
+export {createTask, reloadPage};

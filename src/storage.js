@@ -19,6 +19,6 @@ function setStyles() {
 }
 
 checkLocalStorage();
-console.log(localStorage.savedTodoList);
+//console.log(localStorage.savedTodoList);
 
 export {checkLocalStorage, populateStorage};
